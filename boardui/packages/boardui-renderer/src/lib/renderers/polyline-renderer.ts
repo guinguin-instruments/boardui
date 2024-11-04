@@ -1,4 +1,4 @@
-import { Polyline, LineDescRef, LineDesc } from 'boardui-parser';
+import { Polyline, LineDescRef, LineDesc } from '@guinguin-instruments/boardui-parser';
 import { RendererBase } from './renderer-base';
 import { ReusablesProvider } from '../reusables-provider';
 import { getLineDescSVGAttributes } from '../extensions/line-desc.extensions';

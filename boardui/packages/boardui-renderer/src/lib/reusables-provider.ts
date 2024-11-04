@@ -5,7 +5,7 @@ import {
   StandardPrimitive,
   Package,
   Layer,
-} from 'boardui-parser';
+} from '@guinguin-instruments/boardui-parser';
 
 export interface ReusablesProvider {
   /** Provides layer element.

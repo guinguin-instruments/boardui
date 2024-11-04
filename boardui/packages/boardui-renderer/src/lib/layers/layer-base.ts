@@ -1,5 +1,5 @@
-import { Layer, Step } from 'boardui-parser';
-import { LayerType, LayerTypeRenderProperties } from 'boardui-core';
+import { Layer, Step } from '@guinguin-instruments/boardui-parser';
+import { LayerType, LayerTypeRenderProperties } from '@guinguin-instruments/boardui-core';
 import { RenderContext } from '../render-context';
 
 export abstract class LayerBase {

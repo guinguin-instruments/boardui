@@ -1,4 +1,4 @@
-import { Contour, FillDescRef } from 'boardui-parser';
+import { Contour, FillDescRef } from '@guinguin-instruments/boardui-parser';
 import '../extensions/polygon.extensions';
 import { RendererBase } from './renderer-base';
 import { ReusablesProvider } from '../reusables-provider';

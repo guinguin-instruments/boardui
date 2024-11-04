@@ -1,8 +1,8 @@
 import { RendererBase } from './renderer-base';
 import { ElementType } from '../element-type';
 import { ElementIdProvider } from '../element-id-provider';
-import { RenderProperties } from 'boardui-core';
-import { Pin } from 'boardui-parser';
+import { RenderProperties } from '@guinguin-instruments/boardui-core';
+import { Pin } from '@guinguin-instruments/boardui-parser';
 import { ReusablesProvider } from '../reusables-provider';
 
 export class PinRenderer extends RendererBase<Pin> {

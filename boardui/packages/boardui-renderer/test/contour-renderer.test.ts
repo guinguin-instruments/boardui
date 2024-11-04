@@ -3,7 +3,7 @@ import {
   FillDesc,
   LineDesc,
   PolyStepSegment,
-} from 'boardui-parser';
+} from '@guinguin-instruments/boardui-parser';
 import { ReusablesProviderMock } from './reusables-provider.mock';
 import { ElementIdProviderMock } from './element-id-provider.mock';
 import { RendererProvider } from '../src/lib/renderer-provider';

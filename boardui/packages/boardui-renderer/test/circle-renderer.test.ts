@@ -1,5 +1,5 @@
 import { CircleRenderer } from '../src/lib/renderers/circle-renderer';
-import { Circle, FillDesc, LineDesc } from 'boardui-parser';
+import { Circle, FillDesc, LineDesc } from '@guinguin-instruments/boardui-parser';
 import { ReusablesProviderMock } from './reusables-provider.mock';
 import { ElementIdProviderMock } from './element-id-provider.mock';
 import { RendererProvider } from '../src/lib/renderer-provider';

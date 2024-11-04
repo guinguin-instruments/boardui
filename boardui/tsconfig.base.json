@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "boardui-angular": ["packages/boardui-angular/src/index.ts"],
       "boardui-core": ["packages/boardui-core/src/index.ts"],
       "boardui-parser": ["packages/boardui-parser/src/index.ts"],
       "boardui-renderer": ["packages/boardui-renderer/src/index.ts"]

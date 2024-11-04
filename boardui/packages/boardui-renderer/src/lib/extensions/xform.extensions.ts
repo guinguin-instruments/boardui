@@ -1,6 +1,6 @@
-import { XForm } from 'boardui-parser';
+import { XForm } from '@guinguin-instruments/boardui-parser';
 
-declare module 'boardui-parser' {
+declare module '@guinguin-instruments/boardui-parser' {
   interface XForm {
     getSVGTransformation(): string;
   }

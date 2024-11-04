@@ -11,7 +11,7 @@ import {
   Polyline,
   RectCenter,
   StandardPrimitive,
-} from 'boardui-parser';
+} from '@guinguin-instruments/boardui-parser';
 import {
   ContourRenderer,
   PolylineRenderer,

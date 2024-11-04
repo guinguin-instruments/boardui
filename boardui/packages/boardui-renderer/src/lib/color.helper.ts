@@ -1,4 +1,4 @@
-import { Color } from 'boardui-core';
+import { Color } from '@guinguin-instruments/boardui-core';
 
 export class ColorHelper {
   static getSVGColor(color: Color) {

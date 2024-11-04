@@ -1,4 +1,4 @@
-import { RectCenter, FillDescRef, LineDescRef } from 'boardui-parser';
+import { RectCenter, FillDescRef, LineDescRef } from '@guinguin-instruments/boardui-parser';
 import { RendererBase } from './renderer-base';
 import { ReusablesProvider } from '../reusables-provider';
 import { getFillDescSVGAttributes } from '../extensions/fill-desc.extensions';

@@ -1,4 +1,4 @@
-import { Oval, FillDescRef, LineDescRef } from 'boardui-parser';
+import { Oval, FillDescRef, LineDescRef } from '@guinguin-instruments/boardui-parser';
 import '../extensions/fill-desc.extensions';
 import { RendererBase } from './renderer-base';
 import { ReusablesProvider } from '../reusables-provider';

@@ -1,4 +1,4 @@
-import { Color, ColorRef, FillDesc } from 'boardui-parser';
+import { Color, ColorRef, FillDesc } from '@guinguin-instruments/boardui-parser';
 import { ReusablesProvider } from '../reusables-provider';
 import { getSvgColor } from './color.extensions';
 

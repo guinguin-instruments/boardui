@@ -5,7 +5,7 @@ import {
   LayerFeature,
   Pad,
   Step,
-} from 'boardui-parser';
+} from '@guinguin-instruments/boardui-parser';
 import { ElementType } from '../element-type';
 import '../extensions/color.extensions';
 import { RenderContext } from '../render-context';

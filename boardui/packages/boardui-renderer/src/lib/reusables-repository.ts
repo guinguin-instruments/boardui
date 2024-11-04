@@ -8,7 +8,7 @@ import {
   IPC2581,
   Step,
   DictionaryEntry,
-} from 'boardui-parser';
+} from '@guinguin-instruments/boardui-parser';
 import './extensions/line-desc.extensions';
 import { ReusablesProvider } from './reusables-provider';
 

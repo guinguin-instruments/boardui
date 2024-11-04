@@ -1,4 +1,4 @@
-import { RenderProperties } from 'boardui-core';
+import { RenderProperties } from '@guinguin-instruments/boardui-core';
 import { ElementIdProvider } from '../element-id-provider';
 import { RenderContext } from '../render-context';
 import { Renderer } from '../renderer';

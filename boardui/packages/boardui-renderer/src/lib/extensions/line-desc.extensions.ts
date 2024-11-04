@@ -1,4 +1,4 @@
-import { LineDesc } from 'boardui-parser';
+import { LineDesc } from '@guinguin-instruments/boardui-parser';
 
 export function getLineDescSVGAttributes(
   lineDesc: LineDesc

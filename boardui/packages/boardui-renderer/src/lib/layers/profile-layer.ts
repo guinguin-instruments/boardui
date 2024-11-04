@@ -1,4 +1,4 @@
-import { Layer, Step } from 'boardui-parser';
+import { Layer, Step } from '@guinguin-instruments/boardui-parser';
 import { ElementType } from '../element-type';
 import { RenderContext } from '../render-context';
 import { RendererProvider } from '../renderer-provider';

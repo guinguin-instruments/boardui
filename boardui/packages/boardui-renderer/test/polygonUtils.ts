@@ -1,4 +1,4 @@
-import { FillDescGroup, Polygon, XForm } from 'boardui-parser';
+import { FillDescGroup, Polygon, XForm } from '@guinguin-instruments/boardui-parser';
 
 export function getPolygon(
   segments: [number, number][],

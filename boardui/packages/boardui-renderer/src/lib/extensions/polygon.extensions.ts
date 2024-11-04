@@ -4,7 +4,7 @@ import {
   Polyline,
   PolyStepCurve,
   PolyStepSegment,
-} from 'boardui-parser';
+} from '@guinguin-instruments/boardui-parser';
 import { Bounds } from '../bounds';
 
 export function getPolygonPath(polygon: Polygon | Polyline, cutouts: Polygon[]): string {

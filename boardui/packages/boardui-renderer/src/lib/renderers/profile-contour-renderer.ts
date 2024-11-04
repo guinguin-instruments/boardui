@@ -1,4 +1,4 @@
-import { Contour } from 'boardui-parser';
+import { Contour } from '@guinguin-instruments/boardui-parser';
 import '../extensions/polygon.extensions';
 import { RendererBase } from './renderer-base';
 import { getPolygonPath } from '../extensions/polygon.extensions';

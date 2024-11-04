@@ -1,4 +1,4 @@
-import { Hole, Layer, LayerFeature, Set, Step } from 'boardui-parser';
+import { Hole, Layer, LayerFeature, Set, Step } from '@guinguin-instruments/boardui-parser';
 import { Bounds } from '../bounds';
 import { RenderContext } from '../render-context';
 import { RendererProvider } from '../renderer-provider';

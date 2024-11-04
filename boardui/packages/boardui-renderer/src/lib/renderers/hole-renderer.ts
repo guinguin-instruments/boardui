@@ -1,4 +1,4 @@
-import { Hole } from 'boardui-parser';
+import { Hole } from '@guinguin-instruments/boardui-parser';
 import { RendererBase } from './renderer-base';
 
 export class HoleRenderer extends RendererBase<Hole> {

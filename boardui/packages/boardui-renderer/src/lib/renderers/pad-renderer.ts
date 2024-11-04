@@ -1,8 +1,8 @@
 import { RendererBase } from './renderer-base';
 import { ElementType } from '../element-type';
-import { Pad, StandardPrimitiveRef } from 'boardui-parser';
+import { Pad, StandardPrimitiveRef } from '@guinguin-instruments/boardui-parser';
 import { ElementIdProvider } from '../element-id-provider';
-import { RenderProperties } from 'boardui-core';
+import { RenderProperties } from '@guinguin-instruments/boardui-core';
 import { ReusablesProvider } from '../reusables-provider';
 
 export class PadRenderer extends RendererBase<Pad> {
