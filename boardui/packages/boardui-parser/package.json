@@ -1,8 +1,12 @@
 {
-  "name": "boardui-parser",
+  "name": "@guinguin-instruments/boardui-parser",
   "version": "0.0.1",
   "type": "commonjs",
   "dependencies": {
     "sax-wasm": "^2.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guinguin-instruments/boardui.git"
   }
 }

@@ -1,5 +1,9 @@
 {
-  "name": "boardui-core",
+  "name": "@guinguin-instruments/boardui-core",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guinguin-instruments/boardui.git"
+  }
 }
