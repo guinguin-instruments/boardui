@@ -1,13 +1,13 @@
 import { DrillLayer } from './layers/drill-layer';
 import { RendererProvider } from './renderer-provider';
 import { ConductorLayer } from './layers/conductor-layer';
-import { IPC2581, Layer, Side } from 'boardui-parser';
+import { IPC2581, Layer, Side } from '@guinguin-instruments/boardui-parser';
 import { RenderContext } from './render-context';
 import { SilkscreenLayer } from './layers/silkscreen-layer';
 import { ComponentLayer } from './layers/component-layer';
 import { ProfileLayer } from './layers/profile-layer';
 import { ElementType } from './element-type';
-import { RenderProperties } from 'boardui-core';
+import { RenderProperties } from '@guinguin-instruments/boardui-core';
 import { ElementIdProvider } from './element-id-provider';
 import { getPolygonBounds } from './extensions/polygon.extensions';
 import { ReusablesProvider } from './reusables-provider';
