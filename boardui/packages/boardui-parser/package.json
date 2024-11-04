@@ -1,6 +1,6 @@
 {
   "name": "@guinguin-instruments/boardui-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "commonjs",
   "dependencies": {
     "sax-wasm": "^2.2.2"

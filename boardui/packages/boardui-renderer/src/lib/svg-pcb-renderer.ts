@@ -1,25 +1,28 @@
 import { DrillLayer } from './layers/drill-layer';
 import { RendererProvider } from './renderer-provider';
 import { ConductorLayer } from './layers/conductor-layer';
-import { IPC2581, Layer, Side } from '@guinguin-instruments/boardui-parser';
+import { IPC2581, Layer, Side } from 'boardui-parser';
 import { RenderContext } from './render-context';
 import { SilkscreenLayer } from './layers/silkscreen-layer';
 import { ComponentLayer } from './layers/component-layer';
 import { ProfileLayer } from './layers/profile-layer';
 import { ElementType } from './element-type';
-import { RenderProperties } from '@guinguin-instruments/boardui-core';
+import { RenderProperties } from 'boardui-core';
 import { ElementIdProvider } from './element-id-provider';
 import { getPolygonBounds } from './extensions/polygon.extensions';
 import { ReusablesProvider } from './reusables-provider';
+import { JSDOM } from "jsdom";
 
 export class SVGPCBRenderer {
   private _cloneableSvgElement: SVGElement;
+  private jsdocument = (new JSDOM(`...`)).window.document;
 
   constructor(
     private _reusablesProvider: ReusablesProvider,
     private _renderProperties: RenderProperties
   ) {
-    this._cloneableSvgElement = document.createElementNS(
+    
+    this._cloneableSvgElement = this.jsdocument.createElementNS(
       'http://www.w3.org/2000/svg',
       'svg'
     );
@@ -51,7 +54,7 @@ export class SVGPCBRenderer {
       this._cloneableSvgElement.cloneNode() as SVGElement;
     svgElement.setAttribute(ElementType.STEP, step.name);
     //svgElement.setAttribute("id", renderContext.elementIdProvider.getElementId(step).toString());
-    const defsElement = document.createElementNS(
+    const defsElement = this.jsdocument.createElementNS(
       'http://www.w3.org/2000/svg',
       'defs'
     );
@@ -83,12 +86,12 @@ export class SVGPCBRenderer {
     ).render();
 
     if (this._renderProperties.dropShadow) {
-      const filterElement = document.createElementNS(
+      const filterElement = this.jsdocument.createElementNS(
         'http://www.w3.org/2000/svg',
         'filter'
       );
       filterElement.setAttribute('id', 'board-shadow');
-      const dropShadowElement = document.createElementNS(
+      const dropShadowElement = this.jsdocument.createElementNS(
         'http://www.w3.org/2000/svg',
         'feDropShadow'
       );
@@ -110,27 +113,39 @@ export class SVGPCBRenderer {
     }
     svgElement.appendChild(defsElement);
 
+    // Create an array of layers to render
+    // but only take into account the top, bottom, ALL etc. (side) and DRILL layers
     const layers = pcb.content.layerRefs
       .map((x) => x.name)
       .map((x) => renderContext.reusablesProvider.getLayerByName(x))
       .filter(
         (layer) => layer.side === side || layer.layerFunction === 'DRILL'
       );
+
+    // Create an array of conductor layers
     const conductorLayers = layers.filter(
       (layer) => layer.layerFunction === 'CONDUCTOR'
     );
+
+    // Create an array of component layers
     const componentLayers = conductorLayers.map((conductorLayer) => {
       const componentLayer = new Layer();
       componentLayer.name = `${conductorLayer.name}`;
       componentLayer.layerFunction = 'COMPONENT';
       return componentLayer;
     });
+
+    // Create an array of drill layers
     const drillLayers = layers.filter(
       (layer) => layer.layerFunction === 'DRILL'
     );
+
+    // Create an array of silkscreen layers
     const silkscreenLayers = layers.filter(
       (layer) => layer.layerFunction === 'SILKSCREEN'
     );
+
+    
     console.table([
       { layerType: 'CONDUCTOR', count: conductorLayers.length },
       { layerType: 'DRILL', count: drillLayers.length },
